@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Upgrade plan to migrate project to Java 25 and Spring Boot 4.x",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-java-spring-boot",
+      "description": "Upgrade to Java 25 and Spring Boot 4.x",
+      "reason": "Align with latest LTS versions for enhanced performance, security features, and long-term support. Spring Boot 4.x requires Java 25 and includes Spring Framework 7.x with Jakarta EE migration.",
+      "requirements": "Upgrade JDK to Java 25, Spring Boot to 4.x, Spring Framework to 7.x, and migrate javax.* to jakarta.* packages. Ensure all dependencies are compatible with the target versions.",
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "started"
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-java-25-spring-boot-4",
+    "projectName": "Java Application",
+    "language": "java",
+    "createdAt": "2026-09-28T09:22:50.836+02:00",
+    "version": "1.0"
+  }
+}
